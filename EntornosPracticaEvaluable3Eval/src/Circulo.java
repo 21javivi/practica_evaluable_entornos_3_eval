@@ -2,38 +2,58 @@
 public class Circulo implements Figura {
 	// ATRIBUTOS
 	String nombre;
-	int radio;
+	float radio;
 
 	// CONSTRUCTORES
-	public Circulo(String nombre, int radio) {
+	public Circulo(String nombre, float radio) {
 		if (radio <= 1000) {
 			this.nombre = nombre;
 			this.radio = radio;
 		}
 	}
 
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public float getRadio() {
+		return radio;
+	}
+
+	public void setRadio(float radio) {
+		this.radio = radio;
+	}
+
 	// METODOS DE LA CLASE
 	@Override
-	public int area() {
-		return (int) (Math.PI * Math.pow(radio, 2));
+	public float area() {
+		return   (float) (Math.PI * Math.pow(radio, 2));
 
 	}
 
 	@Override
-	public int perimetro() {
-		return (int) (2 * Math.PI * radio);
+	public float perimetro() {
+		return   (float) (2 * Math.PI * radio);
 	}
 
 	@Override
-	public void duplica(Integer nuevo) {
-		nuevo = nuevo * 2;
+	public void doble() {
+
+		if (this.radio * 2 <= 1000) {
+			this.radio = this.radio * 2;
+		}
 
 	}
 
 	@Override
-	public void divide2(Integer nuevo) {
-		if (nuevo % 2 >= 0) {
-			nuevo = (int) nuevo / 2;
+	public void divide2() {
+		
+		if (this.radio/2>0) {
+			this.radio=this.radio/2;
 		}
 
 	}

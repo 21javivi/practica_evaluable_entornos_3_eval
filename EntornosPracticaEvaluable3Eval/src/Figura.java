@@ -1,12 +1,14 @@
 
 public interface Figura {
 
-	int area();
+	float area();
 
-	int perimetro();
+	float perimetro();
 
-	void duplica(Integer nuevo);
+	void doble();
 
-	void divide2(Integer nuevo);
+	void divide2();
+
+	String getNombre();
 
 }
